@@ -4,8 +4,9 @@
 */
 
 #include <iostream>
+#include "just.cc"
 
 int main(int args, char* argv[]) {
     std::cout << "Hello world" << std::endl;
-    return 0;
+    return just::ret();
 }
