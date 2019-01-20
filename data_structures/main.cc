@@ -6,6 +6,7 @@
 #include <iostream>
 #include "astack.cc"
 #include "stack.cc"
+#include "list.cc"
 
 int main(int args, char* argv[]) {
     Astack::Astack s;
@@ -24,4 +25,9 @@ int main(int args, char* argv[]) {
     std::cout << ss.pop() << std::endl;
     std::cout << ss.pop() << std::endl;
     return 0;
+
+    List::List<char[]> l;
+    l.insert({'H'});
+    l.insert({'a'});
+    std::cout << l.pop() << std::endl << l.pop() << std::endl;
 }
