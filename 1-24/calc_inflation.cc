@@ -11,12 +11,9 @@ double pow(double cost, double rate, int years, double curr) {
   if (years) {
     if (years & 0x80000000) {
       curr *= rate;
-      years <<= 1;
-      curr *= curr;
-    } else {
-      curr *= curr;
-      years <<= 1;
     }
+    years <<= 1;
+    curr *= curr;
     return pow(cost, rate, years, curr);
   } else {
     return curr*cost;
@@ -34,6 +31,6 @@ int main(int argc, char* argv[]) {
   std::cin >> rate;
   std::cout << "Enter number of years: ";
   std::cin >> years;
-  std::cout << pow(cost, rate, years, 1.0) std::endl;
+  std::cout << pow(cost, rate, years, 1.0) << std::endl;
   return 0;
 }
