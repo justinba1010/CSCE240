@@ -1,6 +1,8 @@
 /*  Justin Baum
     18 January 2019
     CSCE240 Multifiles Practice
+    Bored in class, want to practice
+    No pointers.s
 */
 
 #include <iostream>
