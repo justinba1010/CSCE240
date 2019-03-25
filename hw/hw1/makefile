@@ -7,17 +7,17 @@ LINK = $(CC) $(FLAGS) -o  # final linked build to binary executable
 
 COMPILE = $(CC) $(FLAGS) -c  # compilation to intermediary .o files
 
-compile:
-	g++ -std=c++11 -Wall -o main main.cc;
+test : parse_scores
+	python3 test_parse_scores.py
 
-stackmain: stackmain.cc
-	$(LINK) stackmain stackmain.cc
-	./stackmain
+parse_scores : parse_scores.cc
+	$(LINK) $@ $^ 
 
 clean:
-	rm main$
+	@rm parse_scores
 
-ignore_errors:
-	g++ -std=c++11 -o main main.cc;
+#to_linux:
+	#bash ./linux.sh
 
-.PHONY: struct stackmain
+zip:
+	zip hw1 * -x parse_scores;
