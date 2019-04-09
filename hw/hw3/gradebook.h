@@ -12,6 +12,8 @@
 #include <cmath>
 #include <limits>
 
+using std::abs;
+
 class GradeBook {
  private:
   std::vector<double> gradebook_;
