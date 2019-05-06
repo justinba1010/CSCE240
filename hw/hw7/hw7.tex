@@ -1,0 +1,65 @@
+\documentclass[fleqn]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{mathexam}
+\usepackage{verbatim}
+
+\ExamClass{CSCE 240}
+\ExamName{Homework 7}
+\ExamHead{Due: 03 May 2019}
+
+\let
+\ds
+\displaystyle
+
+\begin{document}
+\ExamInstrBox {
+  You shall submit a zipped, \textbf{and only zipped}, archive of your homework
+  directory, hw7. The directory shall contain, at a minimum, the files and
+  directories \texttt{src/matrix.cc} and \texttt{inc/matrix.h}. Name the archive
+  submission file hw7.zip \\
+
+  I will use my own makefile to compile and link to your \texttt{src/matrix.cc}
+  and \texttt{inc/matrix.h} files. If you do not submit in this way \textbf{YOU
+  WILL RECEIVE A ZERO}.
+}
+%
+This assignment tests your ability to manage memory of a generic type. You are
+to implement the basics of a matrix class, using a two-dimensional array of
+templated type as your representation. You may assume the generic type will have
+all the same operators defined as any numeric type (+, -, *, /, =, etc...). \\
+%
+\\
+I will be using white-box testing, so the friend class MatrixTester along with
+its forward decl must remain in place and unchanged. \\
+%
+\\
+Read the provided header file documentation for instructions on method
+functionality. They are currently defined for a \texttt{double} type. That must
+be changed to a template type. \textbf{YOU} must read the documentation and
+decide which data types need to be modified to generic. \\
+%
+\\
+I have provided you a set of test apps which you can use to ensure that your
+code is, at least partially, correct. \textbf{I would suggest a more rigorous
+testing scheme, especially testing your assignment operator}. The tests use a
+double as the template for the matrix. I \textbf{WILL} use other types. I would
+recommend ensure that it works, at least, for an integer type and maybe an
+unsigned integer type as well. \\
+%
+\\
+There will be no late assignments accepted. I am giving you until the last
+possible time to get it in. I repeat, I \textbf{WILL NOT} accept late
+assignments. \\
+\\
+%
+The point allocation is specified in the header file. There will be no
+points for compilation that does not pass at least one test. Style points will
+be all-or-nothing for this assignment. \\
+\\
+%
+If you accumulate the points for this assignment, you will see that there are 10
+points to earn, but the assignment counts as 5. This means that there is up to
+5 bonus points available. \\
+\\
+\end{document}
+
